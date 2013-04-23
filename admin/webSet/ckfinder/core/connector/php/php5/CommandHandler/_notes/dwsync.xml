@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="CommandHandlerBase.php" server="D:/USBWebServer/root/" local="130110907514685546" remote="130110907510000000" Dst="0" />
+<file name="CopyFiles.php" server="D:/USBWebServer/root/" local="130110907514695546" remote="130110907510000000" Dst="0" />
+<file name="CreateFolder.php" server="D:/USBWebServer/root/" local="130110907514715548" remote="130110907510000000" Dst="0" />
+<file name="DeleteFiles.php" server="D:/USBWebServer/root/" local="130110907514725548" remote="130110907510000000" Dst="0" />
+<file name="DeleteFolder.php" server="D:/USBWebServer/root/" local="130110907514725548" remote="130110907510000000" Dst="0" />
+<file name="DownloadFile.php" server="D:/USBWebServer/root/" local="130110907514735549" remote="130110907510000000" Dst="0" />
+<file name="FileUpload.php" server="D:/USBWebServer/root/" local="130110907514745549" remote="130110907510000000" Dst="0" />
+<file name="GetFiles.php" server="D:/USBWebServer/root/" local="130110907514755550" remote="130110907510000000" Dst="0" />
+<file name="GetFolders.php" server="D:/USBWebServer/root/" local="130110907514765550" remote="130110907510000000" Dst="0" />
+<file name="Init.php" server="D:/USBWebServer/root/" local="130110907514775551" remote="130110907510000000" Dst="0" />
+<file name="LoadCookies.php" server="D:/USBWebServer/root/" local="130110907514785552" remote="130110907510000000" Dst="0" />
+<file name="MoveFiles.php" server="D:/USBWebServer/root/" local="130110907514795552" remote="130110907510000000" Dst="0" />
+<file name="QuickUpload.php" server="D:/USBWebServer/root/" local="130110907514805553" remote="130110907510000000" Dst="0" />
+<file name="RenameFile.php" server="D:/USBWebServer/root/" local="130110907514815553" remote="130110907510000000" Dst="0" />
+<file name="RenameFolder.php" server="D:/USBWebServer/root/" local="130110907514825554" remote="130110907510000000" Dst="0" />
+<file name="Thumbnail.php" server="D:/USBWebServer/root/" local="130110907514835554" remote="130110907510000000" Dst="0" />
+<file name="XmlCommandHandlerBase.php" server="D:/USBWebServer/root/" local="130110907514845555" remote="130110907510000000" Dst="0" />
+</dwsync>

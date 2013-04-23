@@ -41,18 +41,18 @@
         <a href="AllPicture.php" class="button" style="height:20px">查看所有图片</a>
         <p>
           <label>图片文件上传</label>
-          <input type="file" class="text-input medium-input datepicker" name="upload"/>
+          <input type="file" class="text-input small-input" name="upload"/>
           
           <br/>
           <h6>请选择所需要的图片</h6>
         </p>
         <p>
           <label>图片链接</label>
-          <input class="text-input medium-input datepicker" type="text" id="medium-input" name="photolink" />
+          <input class="text-input small-input" type="text" id="medium-input" name="photolink" />
         </p>
         <p>
           <label>图片信息</label>
-          <input class="text-input medium-input datepicker" type="text" id="medium-input" name="photoinfo" />
+          <input class="text-input small-input" type="text" id="medium-input" name="photoinfo" />
         </p>
         <p>
           <input class="button" type="submit" value="提交" />

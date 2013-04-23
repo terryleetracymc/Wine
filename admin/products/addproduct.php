@@ -9,9 +9,10 @@
 <script type="text/javascript" src="resources/scripts/simpla.jquery.configuration.js"></script>
 <script type="text/javascript" src="resources/scripts/facebox.js"></script>
 <script type="text/javascript" src="resources/scripts/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="ckfinder/ckfinder.js"></script>
 </head>
 <body>
-<p></p><p></p><p></p><p></p><p></p>
 <div class="content-box"> 
   <!-- Start Content Box -->
   <div class="content-box-header">
@@ -26,26 +27,26 @@
         <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
         <p>
           <label>图片文件上传</label>
-          <input type="file" class="text-input medium-input datepicker" name="upload"/>
+          <input type="file" class="text-input small-input" name="upload"/>
           <br />
         <h6>请选择所需要的图片</h6> </p>
         <p>
           <label>名称<strong style="color:#F00">(*必须)</strong></label>
-          <input class="text-input medium-input datepicker" type="text" id="medium-input" name="winename"/>
+          <input class="text-input small-input" type="text" id="medium-input" name="winename"/>
           <input type="hidden" name="transtype" value="add"/>
         </p>
         <p>
           <label>价格</label>
-          <input class="text-input medium-input datepicker" type="text" id="medium-input" name="price" />
+          <input class="text-input small-input" type="text" id="medium-input" name="price" />
         </p>
         <p>
           <label>产地</label>
-          <input class="text-input medium-input datepicker" type="text" id="medium-input" name="region" />
+          <input class="text-input small-input" type="text" id="medium-input" name="region" />
         </p>
         <p>
-        </p>
           <label>详细介绍</label>
-          <textarea name="detail"></textarea>
+          <textarea name="detail" class="ckeditor"></textarea>
+        </p>
         <p>
           <input class="button" type="submit" value="提交" />
           <input class="button" type="reset" value="重置" />
