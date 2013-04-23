@@ -20,13 +20,14 @@ Class Db {
 	{
 		$link=null;
 	}
-	function select($table,$aftw="")
+	function select($table,$aftw="",$opt="")
 	{
 		$sql="select * from $table";
 		if($aftw!="")
 		{
 			$sql=$sql." where $aftw";
 		}
+		$sql=$sql." $opt";
 		$rst=$this->link->query($sql);
 		$time=0;
 		while($this->row[$time+1]=$rst->fetch(PDO::FETCH_BOTH))

@@ -29,7 +29,20 @@
 <?php 		
 	include_once("DBLink/Db.php");
 	$DB=new Db();
+	if(isset($_GET['page']))
+	{
+		$page=$_GET['page'];
+	}
+	else
+	{
+		$page=1;
+	}
 	$DB->select("wine");
+	$nums=$DB->num;
+	$num=5;
+	$pages=$nums/$num;
+	$start=($page-1)*$num;
+	$DB->select("wine","","limit $start,$num");
 ?><p></p><p></p><p></p><p></p><p></p>
 <div class="content-box"> 
   <!-- Start Content Box -->
@@ -41,6 +54,7 @@
   
   <!-- End .content-box-header -->
   <div class="content-box-content">
+  <fieldset>
     <table>
       <tr>
         <th>图片</th>
@@ -76,5 +90,19 @@
       <?php }?>
     </table>
   </div>
+  <p></p>
+  <div id="content-box-content">
+  
+  <?php
+    for($i=0;$i<$pages;$i++)
+	{
+  ?>
+    <a class="button" href="allproduct.php?page=<?php echo $i+1;?>"><?php echo $i+1;?></a>
+  <?php 
+    }
+  ?>
+  </div>
+  <p></p>
+  </fieldset>
 </div>
 </body>
