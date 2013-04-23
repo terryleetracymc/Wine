@@ -25,9 +25,8 @@
 </head>
 <body>
 <?php if($_GET['p']=="forms"){?>
-
-<div class="content-box"> 
 <p></p><p></p><p></p><p></p><p></p>
+<div class="content-box"> 
   <!-- Start Content Box -->
   <div class="content-box-header">
     <h3>图片上传</h3>
@@ -39,13 +38,14 @@
     <form action="upload.php?action=add" enctype="multipart/form-data" method="post">
       <fieldset>
         <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
-        <a href="AllPicture.php"><h3>查看所有图片</h3></a>
+        <a href="AllPicture.php" class="button" style="height:20px">查看所有图片</a>
         <p>
           <label>图片文件上传</label>
           <input type="file" class="text-input medium-input datepicker" name="upload"/>
           
-          <br />
-          <small>请选择所需要的图片</small> </p>
+          <br/>
+          <h6>请选择所需要的图片</h6>
+        </p>
         <p>
           <label>图片链接</label>
           <input class="text-input medium-input datepicker" type="text" id="medium-input" name="photolink" />

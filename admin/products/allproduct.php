@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>后台图片修改</title>
+<title>所有产品</title>
 <!--                       CSS                       -->
 <!-- Reset Stylesheet -->
 <link rel="stylesheet" href="resources/css/reset.css" type="text/css" media="screen" />
@@ -29,11 +29,11 @@
 <?php 		
 	include_once("DBLink/Db.php");
 	$DB=new Db();
-	$DB->select("photo");
-?>  <p></p><p></p><p></p><p></p><p></p>
+	$DB->select("wine");
+?><p></p><p></p><p></p><p></p><p></p>
 <div class="content-box"> 
   <!-- Start Content Box -->
-
+  
   <div class="content-box-header">
     <h3>所有图片</h3>
     <div class="clear"></div>
@@ -44,28 +44,33 @@
     <table>
       <tr>
         <th>图片</th>
-        <th>图片链接</th>
-        <th>图片说明</th>
+        <th>名称</th>
+        <th>价格</th>
+        <th>产地</th>
+        <th>详细介绍</th>
         <th>操作</th>
       </tr>
-      <?php
-//             $i=0; 
-            for($i =1 ;$i<=$DB->num;$i++){
+      <?php 
+        for($i =1 ;$i<=$DB->num;$i++){
             ?>
       <tr align="center">
         <td class="picture" style="width:140px;">
-        <a href="<?php echo "../../movingPhoto/".$DB->row[$i]["photoPath"];?>" class="zoombox"><img src=<?php echo "../../movingPhoto/".$DB->row[$i]["photoPath"];?> alt="" style="width:130px; height:90px;" />
+        <a href="<?php echo "../../images/wine/".$DB->row[$i]["photoPath"];?>" class="zoombox"><img src=<?php echo "../../images/wine/".$DB->row[$i]["photoPath"];?> alt="" style="width:130px; height:90px;" />
         </a>
         </td>
-        <td><?php echo $DB->row[$i]["photoinfo"];?></td>
-        <td><a href="<?php echo $DB->row[$i]["photolink"];?>"><?php echo $DB->row[$i]["photolink"];?></a></td>
+        <td><?php echo $DB->row[$i]["name"];?></td>
+        <td><?php echo $DB->row[$i]["price"];?></td>
+        <td><?php echo $DB->row[$i]['region'];?></td>
+        <td><?php echo $DB->row[$i]['introduction'];?></td>
         <td>
-        <a href="MovingImg.php?p=edit&id=<?php echo $DB->row[$i]["id"]?>" title="修改">
+        <a href="editproduct.php?id=<?php echo $DB->row[$i]["id"]?>" title="修改">
         <img src="resources/images/icons/pencil.png" alt="修改" />
         </a> 
-        <a href="deletePic.php?action=del&id=<?php  echo $DB->row[$i]["id"]?>" title="删除" onClick="{if(confirm('确定要删除该信息?')){return true;} return false;}">
+        <a href="deleteproduct.php?id=<?php  echo $DB->row[$i]["id"]?>" title="删除" onClick="{if(confirm('确定要删除该信息?')){return true;} return false;}">
         <img src="resources/images/icons/cross.png" alt="删除" />
         </a>
+        </td>
+        <td>
         </td>
       </tr>
       <?php }?>

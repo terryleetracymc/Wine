@@ -6,6 +6,6 @@
 </head>
 <frameset cols="230px,*" rows="*" border="0">
      <frame src="left.html" name="left"/>
-     <frame src="webSet/welcome.php" name="main"/>
+     <frame src="products/addproduct.php" name="main"/>
 </frameset><noframes></noframes>
 </html>

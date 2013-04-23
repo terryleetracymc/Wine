@@ -25,13 +25,13 @@
 <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="ckfinder/ckfinder.js"></script>
 </head>
-<body>
+<body><p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
 <div class="content-box">
-  <p></p>
-  <p></p>
-  <p></p>
-  <p></p>
-  <p></p>
+  
   <!-- Start Content Box -->
   <div class="content-box-header">
     <h3>静态页面修改</h3>

@@ -8,8 +8,8 @@
 	$upFileType="gif|jpg|bmp|png";
 	$upFileMax = 4096;// 上传大小限制，单位是“KB”，默认为：10
 	if (!preg_match("/(".$upFileType.")/", $_FILES["upload"]["name"]) || ($_FILES["upload"]["size"]==0)){
-		echo "无效文件名";
-		exit;}
+	echo "<script language=javascript>alert('无效文件名!');location.href=\"MovingImg.php?p=forms\";</script>";
+	exit;}
 	if ($_FILES["upload"]["size"]>($upFileMax*1000)){
 	echo "文件上太大，只能是小于".$upFileMax."K";
 	exit;
@@ -32,6 +32,7 @@
 	if($_GET['action']=="edit"){
 		$id=$_GET['id'];
 		$db=new Db();
+		echo $id;
 		$db->select("photo","id=$id");
 		$orifile="../../movingPhoto/".$db->row[1]['photoPath'];
 		if($fileName==NULL)
@@ -49,7 +50,7 @@
 	    }
 		else
 		{
-			echo "yes";
+			//echo "yes";
 			unlink($orifile);
 			if(move_uploaded_file($_FILES['upload']['tmp_name'], "../../movingPhoto/".$fileAddress))
 			{
