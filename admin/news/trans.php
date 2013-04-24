@@ -7,7 +7,7 @@
 		$title=$_POST['title'];
 		$type=$_POST['type'];
 		$content=$_POST['content'];
-		$time=date('Y-m-d H:i:s');
+		$time=date('Y-m-d H:i');
 		$cols=array("news_title","news_type","news_content","news_time");
 		$values=array("'$title'","'$type'","'$content'","'$time'");
 		$db=new Db();

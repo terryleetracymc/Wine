@@ -9,6 +9,11 @@
 		$price=$_POST['price'];
 		$region=$_POST['region'];
 		$detail=$_POST['detail'];
+		
+		$rank=$_POST['rank'];
+		$type=$_POST['type'];
+		$taste=$_POST['taste'];
+		$suggest=$_POST['suggest'];
 		/*echo $fileName."<br/>";
 		echo $ttype."<br/>";
 		echo $price."<br/>";
@@ -34,8 +39,8 @@
 		$fileAddress=rand().date('YmdHis').$fileName;
 		if(move_uploaded_file($_FILES['upload']['tmp_name'], "../../images/wine/".$fileAddress))
 		{
-			$cols=array("name","photoPath","price","region","introduction");
-			$values=array("'$name'","'$fileAddress'","$price","'$region'","'$detail'");
+			$cols=array("name","photoPath","price","region","introduction","rank","type","taste","suggest");
+			$values=array("'$name'","'$fileAddress'","$price","'$region'","'$detail'","'$rank'","'$type'","'$taste'","'$suggest'");
 			$db=new Db();
 			if($db->insert("wine",$cols,$values))
 				echo "<script language=javascript>alert('添加成功！');location.href=\"allproduct.php\";</script>";
@@ -57,17 +62,23 @@
 		$price=$_POST['price'];
 		$region=$_POST['region'];
 		$detail=$_POST['detail'];
+		
+		$rank=$_POST['rank'];
+		$type=$_POST['type'];
+		$taste=$_POST['taste'];
+		$suggest=$_POST['suggest'];
+		
 		$db->select("wine","id=$id");
 		$orifile="../../images/wine/".$db->row[1]['photoPath'];
 		if($fileName==NULL)
 		{
 			//说明不需要修改图像
 			echo "no";
-			$cols=array("name","price","region","introduction");
+			$cols=array("name","price","region","introduction","rank","type","taste","suggest");
 			//echo $photoInfo;
 			//echo $photoLink;
 			
-			$values=array("'$name'","$price","'$region'","'$detail'");
+			$values=array("'$name'","$price","'$region'","'$detail'","'$rank'","'$type'","'$taste'","'$suggest'");
 			//print_r($values);
 			if($db->update("wine",$cols,$values,"id=$id"))
 				echo "<script language=javascript>alert('修改成功!');location.href=\"allproduct.php\";</script>";
@@ -81,8 +92,8 @@
 			$fileAddress=rand().date('YmdHis').$fileName;
 			if(move_uploaded_file($_FILES['upload']['tmp_name'], "../../images/wine/".$fileAddress))
 			{
-			$cols=array("name","photoPath","price","region","introduction");
-			$values=array("'$name'","'$fileAddress'","$price","'$region'","'$detail'");
+			$cols=array("name","photoPath","price","region","introduction","rank","type","taste","suggest");
+			$values=array("'$name'","'$fileAddress'","$price","'$region'","'$detail'","'$rank'","'$type'","'$taste'","'$suggest'");
 				$db->update("wine",$cols,$values,"id=$id");
 				echo "<script language=javascript>alert('修改成功!');location.href=\"allproduct.php?p=forms\";</script>";
 			}

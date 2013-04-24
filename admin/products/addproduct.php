@@ -31,17 +31,22 @@
           <br />
         <h6>请选择所需要的图片</h6> </p>
         <p>
-          <label>名称<strong style="color:#F00">(*必须)</strong></label>
+          <label>名称</label>
           <input class="text-input small-input" type="text" id="medium-input" name="winename"/>
-          <input type="hidden" name="transtype" value="add"/>
+          <input type="hidden" name="transtype" value="add"/><strong style="color:#F00">(*必须)</strong>
+        </p>
+        
+        <p>
+          <label>价格</label><input class="text-input small-input" type="text" id="medium-input" name="price" />
+          <label>等级</label><input class="text-input small-input" type="text" id="medium-input" name="rank" />
         </p>
         <p>
-          <label>价格</label>
-          <input class="text-input small-input" type="text" id="medium-input" name="price" />
+          <label>产地</label><input class="text-input small-input" type="text" id="medium-input" name="region" />
+          <label>类型</label><input class="text-input small-input" type="text" id="medium-input" name="type" />
         </p>
         <p>
-          <label>产地</label>
-          <input class="text-input small-input" type="text" id="medium-input" name="region" />
+          <label>口味</label><input class="text-input small-input" type="text" id="medium-input" name="taste" />
+          <label>饮用建议</label><input class="text-input small-input" type="text" id="medium-input" name="suggest" />
         </p>
         <p>
           <label>详细介绍</label>

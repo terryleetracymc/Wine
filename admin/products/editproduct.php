@@ -38,23 +38,26 @@
           <br />
         <h6>请选择所需要的图片</h6> </p>
         <p>
-          <label>名称<strong style="color:#F00">(*必须)</strong></label>
+          <label>名称</label>
           <input class="text-input small-input" type="text" id="medium-input" name="winename" value="<?php echo $db->row[1]['name'];?>"/>
-          <input type="hidden" name="transtype" value="edit"/>
+          <input type="hidden" name="transtype" value="add"/><strong style="color:#F00">(*必须)</strong>
         </p>
-        <p>
-          <label>价格</label>
-          <input class="text-input small-input" type="text" id="medium-input" name="price" value="<?php echo $db->row[1]['price'];?>"/>
-        </p>
-        <p>
-          <label>产地</label>
-          <input class="text-input small-input" type="text" id="medium-input" name="region" value="<?php echo $db->row[1]['region'];?>"/>
-        </p>
-        <p>
         
-          <label>详细介绍</label>
+        <p>
+          <label>价格</label><input class="text-input small-input" type="text" id="medium-input" name="price" value="<?php echo $db->row[1]['price'];?>"/>
+          <label>等级</label><input class="text-input small-input" type="text" id="medium-input" name="rank" value="<?php echo $db->row[1]['rank'];?>"/>
+        </p>
+        <p>
+          <label>产地</label><input class="text-input small-input" type="text" id="medium-input" name="region" value="<?php echo $db->row[1]['region'];?>"/>
+          <label>类型</label><input class="text-input small-input" type="text" id="medium-input" name="type" value="<?php echo $db->row[1]['type'];?>"/>
+        </p>
+        <p>
+          <label>口味</label><input class="text-input small-input" type="text" id="medium-input" name="taste" value="<?php echo $db->row[1]['taste'];?>"/>
+          <label>饮用建议</label><input class="text-input small-input" type="text" id="medium-input" name="suggest" value="<?php echo $db->row[1]['suggest'];?>"/>
+        </p>
+        <p>
           <textarea name="detail" class="ckeditor" id="ckeditor" ><?php echo $db->row[1]['introduction'];?>"</textarea>
-        </p><p>
+        </p>
           <input class="button" type="submit" value="提交" />
           <input class="button" type="reset" value="重置" />
         </p>

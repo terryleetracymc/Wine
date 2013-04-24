@@ -59,7 +59,7 @@
       <tr>
         <th>标题</th>
         <th>类型</th>
-        <th>内容</th>
+        <th>时间</th>
         <th>操作</th>
       </tr>
       <?php 
@@ -70,7 +70,7 @@
         <?php echo $DB->row[$i]["news_title"];?>
         </td>
         <td><?php echo $DB->row[$i]["news_type"];?></td>
-        <td><?php echo $DB->row[$i]["news_content"];?></td>
+        <td><?php echo $DB->row[$i]["news_time"];?></td>
         <td>
         <a href="editnews.php?id=<?php echo $DB->row[$i]["id"]?>" title="修改">
         <img src="resources/images/icons/pencil.png" alt="修改" />

@@ -61,7 +61,9 @@
         <th>名称</th>
         <th>价格</th>
         <th>产地</th>
-        <th>详细介绍</th>
+        <th>等级</th>
+        <th>类型</th>
+        <th>口味</th>
         <th>操作</th>
       </tr>
       <?php 
@@ -75,7 +77,9 @@
         <td><?php echo $DB->row[$i]["name"];?></td>
         <td><?php echo $DB->row[$i]["price"];?></td>
         <td><?php echo $DB->row[$i]['region'];?></td>
-        <td><?php echo $DB->row[$i]['introduction'];?></td>
+        <td><?php echo $DB->row[$i]['rank'];?></td>
+        <td><?php echo $DB->row[$i]['type'];?></td>
+        <td><?php echo $DB->row[$i]['taste'];?></td>
         <td>
         <a href="editproduct.php?id=<?php echo $DB->row[$i]["id"]?>" title="修改">
         <img src="resources/images/icons/pencil.png" alt="修改" />
