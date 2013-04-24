@@ -80,7 +80,7 @@
     for($i=0;$i<$pages;$i++)
 	{
   ?>
-    <a class="button" href="allproduct.php?page=<?php echo $i+1;?>"><?php echo $i+1;?></a>
+    <a class="button" href="allmsg.php?page=<?php echo $i+1;?>"><?php echo $i+1;?></a>
   <?php 
     }
   ?>
