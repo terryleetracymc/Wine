@@ -1,13 +1,13 @@
 <?php
 Class Db {
-	var $link;
-	var $row;
-	var $num;
+	private $link;
+	public  $row;
+	public $num;
+	private $sql="";
 	function __construct()
 	{
 		require_once("config.db.php");
 		$dsn=$db_config["dbtype"].":dbname=".$db_config["database"].";host=".$db_config["hostname"].";port=".$db_config["port"];
-		//echo $dsn;
 		try{
 		$this->link=new PDO($dsn,$db_config["username"],$db_config["password"]);
 		$this->link->exec("set names ".$db_config["charset"]);}
@@ -16,18 +16,50 @@ Class Db {
 			echo "数据库连接失败！".$e->getMessage()."<br/>";
 		}
 	}
+	
 	function __destruct()
 	{
 		$link=null;
 	}
-	function select($table,$aftw="")
+
+	
+	/**
+	 * 本函数显示的是数据库语句
+	 */
+	function showSql(){
+		echo "sql语句是：".$this->sql;
+	}
+	/**
+	 * 本函数设置查询的表格
+	 */
+	function table($table){
+		$this->sql = "select * from ".$table;
+	}
+	/**
+	 * 本函数设置查询语句where部分的内容
+	 */
+	function where($whereStr){
+		$this->sql = $this->sql.$whereStr;
+	}
+	/**
+	 * 本函数设置查询语句limit部分的内容
+	 */
+	function limit($num){
+		$this->sql = $this->sql." limit ".$num;
+	}
+	/**
+	 * 本函数设置查询语句order部分的内容
+	 */
+	function order($orderStr){
+		$this->sql = $this->sql.$orderStr;
+	}
+                            
+	/**
+	 * 本函数设置查询语句select
+	 */
+	function select()
 	{
-		$sql="select * from $table";
-		if($aftw!="")
-		{
-			$sql=$sql." where $aftw";
-		}
-		$rst=$this->link->query($sql);
+		$rst=$this->link->query($this->sql);
 		$time=0;
 		while($this->row[$time+1]=$rst->fetch(PDO::FETCH_BOTH))
 		{
@@ -35,6 +67,8 @@ Class Db {
 		}
 		$this->num=$time;
 	}
+	
+	
 	function delete($table,$aftw="")
 	{
 		$sql="delete from $table";
@@ -65,7 +99,6 @@ Class Db {
 		$tab_name=substr($tab_name,0,-1).")";
 		$values=substr($values,0,-1).")";
 		$sql="insert into $table $tab_name values $values";
-		//echo $sql;
 		$this->link->exec($sql);
 	}
 }

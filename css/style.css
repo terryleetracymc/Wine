@@ -49,7 +49,7 @@ section ul.list li a:hover { text-decoration: underline; }
 
 section ul.list1{margin:0; padding:0; list-style:none;}
 section ul.list1 li{ float:left; padding-bottom:1px;}
-section ul.list1 li a{color:#010101; text-decoration:none; line-height:50px; font-size:13px; font-weight:bold; text-transform:uppercase; background:#e7e7e7; margin:0; padding-left:38px; width:238px; display:block } 
+section ul.list1 li a{color:#010101; text-decoration:none; line-height:50px; font-size:18px; font-weight:bold; text-transform:uppercase; background:#e7e7e7; margin:0; padding-left:38px; width:150px; display:block } 
 section ul.list1 li a:hover { text-decoration:none; background:#2c2c2c; color:#fff; }
 
 section ul.list2{margin:0; padding:0; list-style:none;}
@@ -235,3 +235,18 @@ textarea{
 	height:6px;
 	width:auto;
 }
+
+.news_list a p£û
+float: left;
+£ý
+.news_list ul{
+display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+
+}
+
